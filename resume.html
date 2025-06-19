@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jainam Doshi | CA & Actuarial Professional</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #111827; /* gray-900 */
+            color: #d1d5db; /* gray-300 */
+            /* Removed overflow: hidden to improve iOS compatibility */
+        }
+        
+        /* Let the main container handle scrolling */
+        main {
+            height: 100vh;
+            overflow-y: scroll;
+            scroll-snap-type: y mandatory;
+            overscroll-behavior-y: contain; /* Prevents scroll chaining on mobile */
+        }
+
+        /* Styling for each full-screen section */
+        section {
+            height: 100vh;
+            scroll-snap-align: start;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem 1rem;
+            position: relative;
+            width: 100%;
+        }
+
+        /* More dynamic slide-in animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .skill-tag {
+            transition: all 0.2s ease-in-out;
+        }
+        .skill-tag:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px -1px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Keyframes for the animated gradient background */
+        @keyframes shimmer {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .animated-gradient {
+            background: linear-gradient(135deg, #1f2937, #111827, #1f2937, #374151);
+            background-size: 250% 250%;
+            animation: shimmer 12s ease infinite;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="bg-gray-900/80 backdrop-blur-lg fixed top-0 left-0 right-0 z-50 shadow-md shadow-black/20">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="flex justify-between items-center h-16">
+                <h1 class="text-xl font-bold text-gray-100">Jainam Doshi</h1>
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#summary" class="text-gray-400 hover:text-white transition-colors">Summary</a>
+                    <a href="#education" class="text-gray-400 hover:text-white transition-colors">Education</a>
+                    <a href="#skills" class="text-gray-400 hover:text-white transition-colors">Skills</a>
+                    <a href="#interests" class="text-gray-400 hover:text-white transition-colors">Interests</a>
+                    <a href="#certifications" class="text-gray-400 hover:text-white transition-colors">Certifications</a>
+                </nav>
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-400 hover:text-white focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-900/95">
+            <nav class="px-2 pt-2 pb-4 space-y-1 sm:px-3">
+                <a href="#summary" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">Summary</a>
+                <a href="#education" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">Education</a>
+                <a href="#skills" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">Skills</a>
+                <a href="#interests" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">Interests</a>
+                <a href="#certifications" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">Certifications</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Hero/Summary Section -->
+        <section id="summary" class="fade-in">
+             <div class="w-full max-w-5xl">
+                <div class="animated-gradient p-8 rounded-2xl shadow-2xl shadow-black/40 ring-1 ring-white/10">
+                    <div class="flex flex-col md:flex-row items-center gap-8">
+                        <div class="flex-shrink-0">
+                             <img class="h-32 w-32 rounded-full object-cover border-4 border-blue-500/50 shadow-lg" src="https://placehold.co/200x200/EBF8FF/3182CE?text=JD" alt="Jainam Doshi">
+                        </div>
+                        <div>
+                            <h2 class="text-3xl font-bold text-gray-100">Jainam Doshi</h2>
+                            <p class="text-blue-400 font-semibold mt-1">CA & Actuarial Student | Surat</p>
+                            <p class="mt-4 text-gray-300 leading-relaxed">
+                                I'm on a unique journey, blending the financial precision of Chartered Accountancy with the predictive, analytical power of Actuarial Science. This dual path gives me a distinct perspective on risk and value. I am actively seeking a CA Articleship where I can apply this comprehensive skillset to tackle complex challenges in auditing and financial analysis, contributing a fresh and robust viewpoint to a forward-thinking firm.
+                            </p>
+                            <div class="mt-6 flex items-center space-x-4">
+                                <a href="mailto:jainamdoshi2703@gmail.com" class="inline-flex items-center space-x-2 text-gray-300 hover:text-blue-400 transition-colors">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                                    <span>jainamdoshi2703@gmail.com</span>
+                                </a>
+                                <a href="https://www.linkedin.com/in/jainam-doshi-512551315/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-2 text-gray-300 hover:text-blue-400 transition-colors">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                                    <span>LinkedIn</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="fade-in">
+            <div class="w-full max-w-5xl">
+                <h3 class="text-3xl font-bold text-gray-100 mb-8 text-center">Education & Qualifications</h3>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- CA -->
+                    <div class="bg-gray-800 p-6 rounded-2xl shadow-md shadow-black/30">
+                        <h4 class="text-xl font-semibold text-blue-400 mb-4">Chartered Accountancy (CA)</h4>
+                        <p class="text-sm text-gray-400 mb-4">The Institute of Chartered Accountants of India</p>
+                        <ul class="space-y-3 border-l-2 border-blue-500/30 ml-2 pl-4">
+                            <li><strong class="font-semibold text-gray-200">Intermediate (Group-2)</strong><span class="block text-sm text-gray-400">Expected: Jan 2025</span></li>
+                            <li><strong class="font-semibold text-gray-200">Intermediate (Group-1)</strong><span class="block text-sm text-gray-400">Completed: May 2024</span></li>
+                            <li><strong class="font-semibold text-gray-200">Foundation</strong><span class="block text-sm text-gray-400">Completed: Jan 2022</span></li>
+                        </ul>
+                    </div>
+                    <!-- Actuarial -->
+                    <div class="bg-gray-800 p-6 rounded-2xl shadow-md shadow-black/30">
+                        <h4 class="text-xl font-semibold text-green-400 mb-4">Actuarial Science</h4>
+                         <p class="text-sm text-gray-400 mb-4">Institute and Faculty of Actuaries / Institute of Actuaries of India</p>
+                        <ul class="space-y-3 border-l-2 border-green-500/30 ml-2 pl-4">
+                            <li><strong class="font-semibold text-gray-200">CM1 (Actuarial Mathematics)</strong><span class="block text-sm text-gray-400">Appeared</span></li>
+                            <li><strong class="font-semibold text-gray-200">CB1 (Business Finance)</strong><span class="block text-sm text-gray-400">Completed: May 2024</span></li>
+                            <li><strong class="font-semibold text-gray-200">CB2 (Business Economics)</strong><span class="block text-sm text-gray-400">Completed: Sep 2023</span></li>
+                            <li><strong class="font-semibold text-gray-200">CS1 (Actuarial Statistics)</strong><span class="block text-sm text-gray-400">Completed: May 2022</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Skills Section -->
+        <section id="skills" class="fade-in">
+            <div class="w-full max-w-5xl">
+                <h3 class="text-3xl font-bold text-gray-100 mb-8 text-center">Technical Skills</h3>
+                <div class="bg-gray-800 p-8 rounded-2xl shadow-md shadow-black/30">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div>
+                            <h4 class="font-semibold text-lg text-gray-200 mb-3">Financial & Actuarial</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="skill-tag bg-gray-700 text-gray-200 text-sm font-medium px-3 py-1 rounded-full">Business Valuation</span>
+                                <span class="skill-tag bg-gray-700 text-gray-200 text-sm font-medium px-3 py-1 rounded-full">Financial Modelling</span>
+                                <span class="skill-tag bg-gray-700 text-gray-200 text-sm font-medium px-3 py-1 rounded-full">Time Series Analysis</span>
+                                <span class="skill-tag bg-gray-700 text-gray-200 text-sm font-medium px-3 py-1 rounded-full">Actuarial Modelling</span>
+                                <span class="skill-tag bg-gray-700 text-gray-200 text-sm font-medium px-3 py-1 rounded-full">Statistical Analysis</span>
+                                <span class="skill-tag bg-gray-700 text-gray-200 text-sm font-medium px-3 py-1 rounded-full">Insurance Pricing</span>
+                                <span class="skill-tag bg-gray-700 text-gray-200 text-sm font-medium px-3 py-1 rounded-full">Survival Models</span>
+                            </div>
+                        </div>
+                         <div>
+                            <h4 class="font-semibold text-lg text-gray-200 mb-3">Compliance & Reporting</h4>
+                            <div class="flex flex-wrap gap-2">
+                                 <span class="skill-tag bg-blue-900/50 text-blue-300 text-sm font-medium px-3 py-1 rounded-full">Accounting Standards</span>
+                                 <span class="skill-tag bg-blue-900/50 text-blue-300 text-sm font-medium px-3 py-1 rounded-full">Financial Reporting</span>
+                                 <span class="skill-tag bg-blue-900/50 text-blue-300 text-sm font-medium px-3 py-1 rounded-full">Standards of Auditing</span>
+                                 <span class="skill-tag bg-blue-900/50 text-blue-300 text-sm font-medium px-3 py-1 rounded-full">Companies Act 2013</span>
+                                 <span class="skill-tag bg-blue-900/50 text-blue-300 text-sm font-medium px-3 py-1 rounded-full">Provisions of GST Act</span>
+                                 <span class="skill-tag bg-blue-900/50 text-blue-300 text-sm font-medium px-3 py-1 rounded-full">Provisions of Income Tax Act</span>
+                            </div>
+                        </div>
+                         <div>
+                            <h4 class="font-semibold text-lg text-gray-200 mb-3">Tools & General</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="skill-tag bg-green-900/50 text-green-300 text-sm font-medium px-3 py-1 rounded-full">MS Excel</span>
+                                <span class="skill-tag bg-green-900/50 text-green-300 text-sm font-medium px-3 py-1 rounded-full">PowerPoint</span>
+                                <span class="skill-tag bg-green-900/50 text-green-300 text-sm font-medium px-3 py-1 rounded-full">MS Word</span>
+                                <span class="skill-tag bg-green-900/50 text-green-300 text-sm font-medium px-3 py-1 rounded-full">R</span>
+                                <span class="skill-tag bg-yellow-900/50 text-yellow-300 text-sm font-medium px-3 py-1 rounded-full">Problem-Solving</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interests Section -->
+        <section id="interests" class="fade-in">
+            <div class="w-full max-w-2xl">
+                <h3 class="text-3xl font-bold text-gray-100 mb-8 text-center">Interests</h3>
+                <div class="bg-gray-800 p-8 rounded-2xl shadow-md shadow-black/30">
+                    <ul class="space-y-5">
+                        <li class="flex items-start space-x-4">
+                             <div class="flex-shrink-0 w-8 h-8 bg-purple-900/50 text-purple-400 rounded-full flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-trending-up"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
+                             </div>
+                             <div>
+                                <h4 class="font-semibold text-lg text-gray-200">Financial Markets & Investment</h4>
+                                <p class="text-gray-400">Analyzing market trends and developing investment strategies.</p>
+                             </div>
+                        </li>
+                        <li class="flex items-start space-x-4">
+                             <div class="flex-shrink-0 w-8 h-8 bg-blue-900/50 text-blue-400 rounded-full flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-book-open"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+                             </div>
+                             <div>
+                                <h4 class="font-semibold text-lg text-gray-200">Business Biographies</h4>
+                                <p class="text-gray-400">Reading strategy books and learning from the journeys of successful leaders.</p>
+                             </div>
+                        </li>
+                        <li class="flex items-start space-x-4">
+                             <div class="flex-shrink-0 w-8 h-8 bg-green-900/50 text-green-400 rounded-full flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bar-chart-2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                             </div>
+                             <div>
+                                <h4 class="font-semibold text-lg text-gray-200">Data Analytics & Research</h4>
+                                <p class="text-gray-400">Exploring datasets for insights and conducting actuarial research.</p>
+                             </div>
+                        </li>
+                        <li class="flex items-start space-x-4">
+                            <div class="flex-shrink-0 w-8 h-8 bg-yellow-900/50 text-yellow-400 rounded-full flex items-center justify-center">
+                               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-headphones"><path d="M3 18v-6a9 9 0 0 1 18 0v6"></path><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path></svg>
+                            </div>
+                            <div>
+                               <h4 class="font-semibold text-lg text-gray-200">Podcasts</h4>
+                               <p class="text-gray-400">Listening to podcasts on finance, technology, and self-development.</p>
+                            </div>
+                       </li>
+                       <li class="flex items-start space-x-4">
+                            <div class="flex-shrink-0 w-8 h-8 bg-rose-900/50 text-rose-400 rounded-full flex items-center justify-center">
+                               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-coffee"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg>
+                            </div>
+                            <div>
+                               <h4 class="font-semibold text-lg text-gray-200">Cooking</h4>
+                               <p class="text-gray-400">Engaging in cooking as a creative and mindful activity.</p>
+                            </div>
+                       </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section id="certifications" class="fade-in">
+            <div class="w-full max-w-xl text-center">
+                <h3 class="text-3xl font-bold text-gray-100 mb-8">Certifications</h3>
+                <div class="bg-gray-800 p-8 rounded-2xl shadow-md shadow-black/30 inline-block">
+                    <ul class="space-y-4 text-left">
+                        <li class="flex items-center space-x-3">
+                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-blue-400 feather feather-award"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+                            <span class="font-medium text-lg text-gray-200">ICITSS-Orientation Course</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-blue-400 feather feather-award"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+                            <span class="font-medium text-lg text-gray-200">ICITSS - Information Technology Course</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+    
+    <!-- Footer is outside the main scrolling container -->
+    <footer class="bg-gray-900/50 text-gray-400 fixed bottom-0 left-0 right-0 z-50">
+        <div class="max-w-5xl mx-auto px-6 py-2 text-center text-sm">
+            <p>&copy; 2024 Jainam Doshi. Designed with care.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // --- Fade-in animation logic ---
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { 
+                root: document.querySelector('main'),
+                threshold: 0.5 
+            });
+
+            const targets = document.querySelectorAll('.fade-in');
+            targets.forEach(target => observer.observe(target));
+
+            // --- Mobile menu toggle logic ---
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const navLinks = document.querySelectorAll('.mobile-nav-link');
+
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            // --- Close mobile menu when a link is clicked ---
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
